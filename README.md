@@ -1,5 +1,5 @@
-# Update 1/4/2021
-New embed color option for giveaways.
+# Update 10/6/2021
+Discord.JS V13 Update
 # discord-giveaway
 A package for giveaways and drops.
 # Drops
