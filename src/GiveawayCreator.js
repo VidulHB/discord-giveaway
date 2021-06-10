@@ -56,7 +56,7 @@ class GiveawayCreator extends EventEmitter {
         const channel = guild.channels.cache.get(options.channelId);
         
         const giveawayEmbed = new Discord.MessageEmbed()
-        .setAuthor(options.prize)
+        .setAuthor(`${options.prize}`)
         .setColor(this.color)
         .setDescription(`🎖️ Winners: ${options.winners}
         🥳 Hosted By: ${this.client.users.cache.get(options.hostedBy).toString()}`)
