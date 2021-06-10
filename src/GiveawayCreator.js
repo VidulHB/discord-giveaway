@@ -123,15 +123,16 @@ class GiveawayCreator extends EventEmitter {
                     else {
                         finalWinners = winner.map(user => user.toString()).join(', ');
                     }
-                    embed.setDescription(`🎖️ Winner(s): ${finalWinners}`);
+                    embed.setDescription(`🎖️ Winner(s): ${finalWinners} 
+                    🥳 Hosted By: ${this.client.users.cache.get(options.hostedBy).toString()}`);
                     embed.setFooter(this.client.user.username, this.client.user.displayAvatarURL({ format: 'png', size: 512 }));
                     embed.setTimestamp();
                     await message.edit(embed);
                     if (!winner) {
-                        message.channel.send(`Nobody reacted to the **${data.prize}** giveaway. **ID**: \`${messageId}\`\n${message.url}`);
+                        message.channel.send(`Nobody reacted to the **${data.prize}** giveaway. **Giveaway**: ***${message.url}***`);
                     }
                     else {
-                        message.channel.send(`Congratulations ${finalWinners}, you won the **${data.prize}**!\n**ID**: \`${messageId}\`\n${message.url}`);
+                        message.channel.send(`Congratulations ${finalWinners}, you won the **${data.prize}**!\n**Giveaway**: ***${message.url}***`);
                     }
                     const ended = await endGiveaway(messageId);
                     this.emit('giveawayEnd', ended);
@@ -181,17 +182,18 @@ class GiveawayCreator extends EventEmitter {
                 let finalWinners;
                 if (!winner) {
                     finalWinners = 'Nobody Reacted';
-                    message.channel.send(`Nobody reacted to the **${giveaway.prize}** giveaway. **ID**: \`${messageId}\`\n${message.url}`);
+                    message.channel.send(`Nobody reacted to the **${giveaway.prize}** giveaway. **Giveaway**: ***${message.url}***`);
                 }
                 else {
                     finalWinners = winner.map(user => user.toString()).join(', ');
-                    message.channel.send(`Congratulations ${finalWinners}, you won the **${giveaway.prize}**!\n**ID**: \`${messageId}\`\n${message.url}`);
+                    message.channel.send(`Congratulations ${finalWinners}, you won the **${giveaway.prize}**!\n**Giveaway**: ***${message.url}***`);
                 }
 
                 if (embeds.length === 1) {
                     const embed = embeds[0];
 
-                    embed.setDescription(`🎖️ Winner(s): ${finalWinners}`);
+                    embed.setDescription(`🎖️ Winner(s): ${finalWinners} 
+                    🥳 Hosted By: ${this.client.users.cache.get(options.hostedBy).toString()}`);
 
                     await message.edit(embed);
                 }

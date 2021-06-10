@@ -45,7 +45,7 @@ class DropCreator extends EventEmitter {
 
                 const DropEmbed = new Discord.MessageEmbed()
                 .setTitle(`${prize}`)
-                .setDescription(`First to React with 🎉 wins the prize.`)
+                .setDescription(`First to React with 🎉 wins the prize - ${options.prize}`)
                 .setFooter(this.client.user.tag, this.client.user.displayAvatarURL({ size: 512, format: 'png' }))
                 .setColor(guild.me.roles.highest.hexColor)
                 .setTimestamp();
