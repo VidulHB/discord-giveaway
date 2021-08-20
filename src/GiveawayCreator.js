@@ -63,7 +63,7 @@ class GiveawayCreator extends EventEmitter {
         .setFooter(`Ends `)
         .setTimestamp(new Date(Date.now() + options.duration));
 
-        const msg = await channel.send(giveawayEmbed);
+        const msg = await channel.send({ embeds:[giveawayEmbed]});
 
         await msg.react(this.emoji);
         
@@ -127,7 +127,7 @@ class GiveawayCreator extends EventEmitter {
                     🥳 Hosted By: ${this.client.users.cache.get(options.hostedBy).toString()}`);
                     embed.setFooter(this.client.user.username, this.client.user.displayAvatarURL({ format: 'png', size: 512 }));
                     embed.setTimestamp();
-                    await message.edit(embed);
+                    await message.edit({ embeds:[embed]});
                     if (!winner) {
                         message.channel.send(`Nobody reacted to the **${data.prize}** giveaway. **Giveaway**: ***${message.url}***`);
                     }
@@ -195,7 +195,7 @@ class GiveawayCreator extends EventEmitter {
                     embed.setDescription(`🎖️ Winner(s): ${finalWinners} 
                     🥳 Hosted By: ${this.client.users.cache.get(options.hostedBy).toString()}`);
 
-                    await message.edit(embed);
+                    await message.edit({ embeds:[embed]});
                 }
             }
         }
