@@ -1,5 +1,6 @@
 const scheduler = require('node-schedule');
 const GiveawayModel = require('../models/GiveawayModel');
+const Discord = require('discord.js')
 
 function getWinner(users, max) {
     if (users.length < 1) return false;
@@ -50,10 +51,19 @@ async function schedule(stuff, giveawayArray) {
                         embed.setFooter(stuff.client.user.username, stuff.client.user.displayAvatarURL({ format: 'png', size: 512 }));
                         await message.edit(embed);
                         if (!winner) {
-                            message.channel.send(`Nobody reacted to the **${prize}** giveaway. **ID**: \`${messageId}\`\n${message.url}`);
+                            const embedwinner = Discord.MessageEmbed()
+                    .setDescription(`Nobody Reacted To The **${prize}**  Giveaway . [↗️](${message.url})`)
+                    .setColor(this.color)
+
+                    message.channel.send({ embeds: [ embedwinner ]})
                         }
                         else {
-                            message.channel.send(`Congratulations ${finalWinners}, you won the **${prize}**!\n**ID**: \`${messageId}\`\n${message.url}`);
+                            const embedwinner = Discord.MessageEmbed()
+                    .setDescription(`Congratulations ${finalWinners}, you won the **${prize}** Giveaway. [↗️](${message.url})`)
+                    .setColor(this.color)
+
+                    message.channel.send({ embeds: [ embedwinner ]})
+                            
                         }
                         const ended = await endGiveaway(messageId);
                         stuff.emit('giveawayEnd', ended);
