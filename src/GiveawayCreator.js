@@ -129,10 +129,19 @@ class GiveawayCreator extends EventEmitter {
                     embed.setTimestamp();
                     await message.edit({ embeds:[embed]});
                     if (!winner) {
-                        message.channel.send(`Nobody reacted to the **${data.prize}** giveaway. **Giveaway**: ***${message.url}***`);
+                        const embedwinner = Discord.MessageEmbed()
+                    .setDescription(`Nobody Reacted To The **${data.prize}**  Giveaway . [↗️](${message.url})`)
+                    .setColor(this.color)
+
+                    message.channel.send({ embeds: [ embedwinner ]})
                     }
                     else {
-                        message.channel.send(`Congratulations ${finalWinners}, you won the **${data.prize}**!\n**Giveaway**: ***${message.url}***`);
+                        const embedwinner = Discord.MessageEmbed()
+                        .setDescription(`Congratulations ${finalWinners}, you won the **${data.prize}** [↗️](${message.url})`)
+                    .setColor(this.color)
+
+                    message.channel.send({ embeds: [ embedwinner ]})
+                       
                     }
                     const ended = await endGiveaway(messageId);
                     this.emit('giveawayEnd', ended);
@@ -182,11 +191,22 @@ class GiveawayCreator extends EventEmitter {
                 let finalWinners;
                 if (!winner) {
                     finalWinners = 'Nobody Reacted';
-                    message.channel.send(`Nobody reacted to the **${giveaway.prize}** giveaway. **Giveaway**: ***${message.url}***`);
+                    const embedwinner = Discord.MessageEmbed()
+                    .setDescription(`Nobody Reacted To The **${giveaway.prize}**  Giveaway . [↗️](${message.url})`)
+                    .setColor(this.color)
+
+                    message.channel.send({ embeds: [ embedwinner ]})
                 }
                 else {
                     finalWinners = winner.map(user => user.toString()).join(', ');
-                    message.channel.send(`Congratulations ${finalWinners}, you won the **${giveaway.prize}**!\n**Giveaway**: ***${message.url}***`);
+
+                    const embedwinner = Discord.MessageEmbed()
+                    .setDescription(`Congratulations ${finalWinners}, you won the **${giveaway.prize}** [↗️](${message.url})`)
+                    .setColor(this.color)
+
+                    message.channel.send({ embeds: [ embedwinner ]})
+
+                    
                 }
 
                 if (embeds.length === 1) {
