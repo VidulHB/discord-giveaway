@@ -51,14 +51,14 @@ async function schedule(stuff, giveawayArray) {
                         embed.setFooter(stuff.client.user.username, stuff.client.user.displayAvatarURL({ format: 'png', size: 512 }));
                         await message.edit(embed);
                         if (!winner) {
-                            const embedwinner = Discord.MessageEmbed()
+                            const embedwinner = new  Discord.MessageEmbed()
                     .setDescription(`Nobody Reacted To The **${prize}**  Giveaway . [↗️](${message.url})`)
                     .setColor(this.color)
 
                     message.channel.send({ embeds: [ embedwinner ]})
                         }
                         else {
-                            const embedwinner = Discord.MessageEmbed()
+                            const embedwinner = new Discord.MessageEmbed()
                     .setDescription(`Congratulations ${finalWinners}, you won the **${prize}** Giveaway. [↗️](${message.url})`)
                     .setColor(this.color)
 
