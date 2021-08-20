@@ -78,8 +78,6 @@ class GiveawayCreator extends EventEmitter {
             winners: options.winners,
             hostedBy: options.hostedBy
         });
-
-        msg.channel.send('Created the giveaway. 🎉');
         await schedule(this, [newGiveaway]);
         this.emit('giveawayStart', newGiveaway);
         return newGiveaway;
