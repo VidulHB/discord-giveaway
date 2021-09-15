@@ -1,6 +1,6 @@
 {
-  "name": "discord-giveaway",
-  "version": "1.1.4",
+  "name": "giveawayss",
+  "version": "1.1.8",
   "description": "A npm package that creates giveaways.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Gav-King/discord-giveaway.git"
+    "url": "git+https://github.com/VidulHB/discord-giveaway.git"
   },
   "keywords": [
     "discord.js-giveaway",
@@ -20,9 +20,9 @@
   "author": "Gav",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Gav-King/discord-giveaway/issues"
+    "url": "https://github.com/VidulHB/discord-giveaway/issues"
   },
-  "homepage": "https://github.com/Gav-King/discord-giveaway#readme",
+  "homepage": "https://github.com/VidulHB/discord-giveaway#readme",
   "dependencies": {
     "discord.js": "^13.0.0-dev.35c2225f5035fce47b0defc12754bda5901a453c",
     "events": "^3.2.0",

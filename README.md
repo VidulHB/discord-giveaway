@@ -1,11 +1,9 @@
-# Update 10/6/2021
+# Update 15/9/2021
 Discord.JS V13 Update
 # discord-giveaway
 A package for giveaways and drops.
 # Drops
 Go [here](https://github.com/Gav-King/discord-giveaway/blob/master/README.md#how-to-use-drops) to see how to use the drops.
-# Examples
-[![Giveaway](/examples/giveaway.png)](/examples/giveaway.png) [![Drop](/examples/drop.png)](/examples/drop.png)
 # Start
 Start by creating a new GiveawayCreator.
 ```js
@@ -208,3 +206,5 @@ The ID of the person who created the drop.
 The date when the drop was created.
 ##### position
 The position of the drop.
+##### Credit To
+[discord-giveaways](https://www.npmjs.com/package/discord-giveaway)
