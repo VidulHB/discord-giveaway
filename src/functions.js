@@ -59,9 +59,9 @@ async function schedule(stuff, giveawayArray) {
                         }
                         else {
                             const embedwinner = new Discord.MessageEmbed()
-                    .setDescription(`Congratulations ${finalWinners}, you won the **${prize}** Giveaway. [↗️](${message.url})`)
+                    .setDescription(`you won the **${prize}** Giveaway. [↗️](${message.url})`)
                     .setColor(this.color)
-
+                    message.channel.send(`Congratulations ${finalWinners}`)
                     message.channel.send({ embeds: [ embedwinner ]})
                             
                         }

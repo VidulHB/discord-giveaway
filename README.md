@@ -1,5 +1,5 @@
-# Update 15/9/2021
-Discord.JS V13 Update
+# Update 16/9/2021
+Discord.JS V13 Update And Embeds Update
 # discord-giveaway
 A package for giveaways and drops.
 # Drops

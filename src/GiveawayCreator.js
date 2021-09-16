@@ -135,9 +135,9 @@ class GiveawayCreator extends EventEmitter {
                     }
                     else {
                         const embedwinner = new Discord.MessageEmbed()
-                        .setDescription(`Congratulations ${finalWinners}, you won the **${data.prize}** [↗️](${message.url})`)
+                        .setDescription(`you won the **${data.prize}** Giveaway. [↗️](${message.url})`)
                     .setColor(this.color)
-
+                    message.channel.send(`Congratulations ${finalWinners}`)
                     message.channel.send({ embeds: [ embedwinner ]})
                        
                     }
@@ -199,9 +199,9 @@ class GiveawayCreator extends EventEmitter {
                     finalWinners = winner.map(user => user.toString()).join(', ');
 
                     const embedwinner = new Discord.MessageEmbed()
-                    .setDescription(`Congratulations ${finalWinners}, you won the **${giveaway.prize}** [↗️](${message.url})`)
+                    .setDescription(`you won the **${giveaway.prize}** Giveaway. [↗️](${message.url})`)
                     .setColor(this.color)
-
+                    message.channel.send(`Congratulations ${finalWinners}`)
                     message.channel.send({ embeds: [ embedwinner ]})
 
                     
