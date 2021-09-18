@@ -1,15 +1,25 @@
-# Update 16/9/2021
+<div align="center">
+  <h1>Giveawayss</h1>
+  <p>
+    <a href="https://www.npmjs.com/package/giveawayss"><img src="https://img.shields.io/npm/v/giveawayss?maxAge=3600" alt="NPM version" /></a>
+    <a href="https://www.npmjs.com/package/giveawayss"><img src="https://img.shields.io/npm/dt/giveawayss?maxAge=3600" alt="NPM downloads" /></a>
+  </p>
+  <p>
+    <a href="https://www.npmjs.com/package/giveawayss"><img src="https://nodei.co/npm/giveawayss.png?downloads=true&stars=true" alt="NPM Banner"></a>
+  </p>
+</div>
+## Update 16/9/2021
 Discord.JS V13 Update And Embeds Update
-# discord-giveaway
+## Giveaways
 A package for giveaways and drops.
 # Drops
-Go [here](https://github.com/Gav-King/discord-giveaway/blob/master/README.md#how-to-use-drops) to see how to use the drops.
+Go [here](https://github.com/VidulHB/discord-giveaway/blob/master/README.md#how-to-use-drops) to see how to use the drops.
 # Start
 Start by creating a new GiveawayCreator.
 ```js
 const { Client } = require('discord.js');
 const client = new Client();
-const { GiveawayCreator } = require('discord-giveaway');
+const { GiveawayCreator } = require('giveawayss');
 const Creator = new GiveawayCreator(client, 'mongodb://...');
 
 client.giveaways = Creator; // Access the Creator from anywhere.
@@ -91,7 +101,7 @@ First, you need to create a new DropCreator.
 ```js
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const Giveaway = require('discord-giveaway');
+const Giveaway = require('giveaways');
 const DropCreator = new Giveaway.DropCreator(client, 'mongodb://...');
 ```
 
@@ -149,7 +159,7 @@ Here are some events you can use for the drops and giveaways.
 ```js
 const { Client } = require('discord.js');
 const client = new Client();
-const { GiveawayCreator, DropCreator } = require('discord-giveaway');
+const { GiveawayCreator, DropCreator } = require('giveawayss');
 const giveaways = new GiveawayCreator(client, 'mongodb://...');
 const drops = new DropCreator(client, 'mongodb://...');
 
@@ -207,4 +217,4 @@ The date when the drop was created.
 ##### position
 The position of the drop.
 ##### Credit To
-[discord-giveaways](https://www.npmjs.com/package/discord-giveaway)
+[discord-giveaway](https://www.npmjs.com/package/discord-giveaway)

@@ -45,12 +45,12 @@ class DropCreator extends EventEmitter {
 
                 const DropEmbed = new Discord.MessageEmbed()
                 .setTitle(`${prize}`)
-                .setDescription(`First to React with 🎉 wins the prize - ${options.prize}`)
+                .setDescription(`First to React with 🎉 wins the prize.`)
                 .setFooter(this.client.user.tag, this.client.user.displayAvatarURL({ size: 512, format: 'png' }))
                 .setColor(guild.me.roles.highest.hexColor)
                 .setTimestamp();
 
-                const msg = await channel.send({ embeds: [ DropEmbed ]});
+                const msg = await channel.send({ embeds: [DropEmbed] });
 
                 await Drops.remove();
 
@@ -68,7 +68,7 @@ class DropCreator extends EventEmitter {
                     embed.setDescription(`${user.toString()} won \`${prize}\`.
                     Please contact ${this.client.users.cache.get(createdBy).toString()} to claim your prize!`);
                     
-                    await msg.edit({ embeds: [ embed ]});
+                    await msg.edit({ embeds: [embed] });
 
                     msg.channel.send(`${user.toString()} won **${prize}**`);
                     this.emit('wonDrop', Drops);
