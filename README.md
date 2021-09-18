@@ -8,7 +8,7 @@
     <a href="https://www.npmjs.com/package/giveawayss"><img src="https://nodei.co/npm/giveawayss.png?downloads=true&stars=true" alt="NPM Banner"></a>
   </p>
   <p>
-    <a href="https://discord.gg/NuNRKKvbPU"><img src="https://discord.com/api/guilds/830627850620108811/widget.png?style=banner3"></a>
+    <a href="https://discord.gg/NuNRKKvbPU"><img src="https://discord.com/api/guilds/830627850620108811/widget.png?style=banner2"></a>
   </p>
 </div>
 
